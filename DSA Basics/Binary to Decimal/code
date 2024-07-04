@@ -1,0 +1,20 @@
+ #include <iostream>
+ #include<math.h>
+ 
+int main() {
+    unsigned int num;
+    std::cout<<"Enter a number:";
+    std::cin>>num;
+    int i = 0;
+    int ans = 0;
+    while(num!=0){
+        int bit= num % 10;
+        if(bit == 1){
+            ans = ans + pow(2,i); 
+        }
+        num = num/ 10;
+        i++;
+    }
+    std::cout<<ans;
+    return 0;
+}
