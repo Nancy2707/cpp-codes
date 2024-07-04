@@ -1,0 +1,36 @@
+ #include <iostream>
+ #include<math.h>
+ 
+int main() {
+    unsigned int num;
+    std::cout<<"Enter a number:";
+    std::cin>>num;
+    int i = 0;
+        int binary=0;
+        while(num!=0){
+        int bit = num & 1;
+        if(bit==1){
+            bit=0;
+        }
+        else{
+            bit=1;
+        }
+        binary= binary + bit * pow(10,i);
+        num = num >> 1;
+        i++;
+        
+    }
+    int ans = 0;
+    int k=0;
+    // std::cout<<binary<<std::endl;
+    while(binary!=0){
+        int bit2 = binary % 10;
+        if(bit2 == 1){
+            ans = ans + pow(2,k); 
+        }
+        binary = binary / 10;
+        k++;
+    }
+    std::cout<<ans;
+    return 0;
+}
