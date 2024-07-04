@@ -1,0 +1,16 @@
+ #include <iostream>
+ #include<math.h>
+ 
+int main() {
+    int num;
+    std::cout<<"Enter a number:";
+    std::cin>>num;
+    int ans = 0;
+    while(num>0){
+        int rem = num % 10;
+        ans = ans * 10 + rem;
+        num = num/10;
+    }
+    std::cout<<"the reversed number is:"<<ans;
+    return 0;
+}
