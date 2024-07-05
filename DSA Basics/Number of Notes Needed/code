@@ -1,0 +1,27 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+
+int main() {
+    int amt,many=1,note;
+    std::cout << "enter the amount:";
+    std::cin>>amt;
+    switch(many){
+    case 1:
+    note = amt / 100;
+    amt = amt % 100;
+    std::cout<<note<< " of 100 are needed"<<std::endl;
+    case 2:
+    note = amt / 50;
+    amt = amt % 50;
+    std::cout<<note<< " of 50 are needed"<<std::endl;
+    case 3:
+    note = amt / 20;
+    amt = amt % 20;
+    std::cout<<note<<" of 20 are needed"<<std::endl;
+    case 4:
+    note = amt / 1;
+    amt = amt % 1;
+    std::cout<<note<<" of 1 are needed"<< std::endl;
+    }
+    return 0;
+}
