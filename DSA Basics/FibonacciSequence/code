@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int FibonacciSequence(int n){
+    int a=0,b=1;
+    int sum =0;
+   if (n == 0) return a; 
+    for (int i = 1; i < n; i++) {
+        sum = a + b;
+        a = b;
+        b = sum;
+    }
+    return b;
+}
+
+int main() {
+   int num;
+   std::cout<<"Enter the term you want from fibonacci sequence:";
+   std::cin>>num;
+   
+   std::cout<<"nth bit: "<<FibonacciSequence(num);
+   return 0;
+}
