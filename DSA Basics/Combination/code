@@ -1,11 +1,13 @@
 #include <iostream>
 using namespace std;
+
 unsigned long long factorial(int n) {
     if (n == 0 || n == 1)
         return 1;
     else
         return n * factorial(n - 1);
 }
+
 unsigned long long combination(int n, int k) {
     if (k > n)
         return 0;
@@ -13,8 +15,9 @@ unsigned long long combination(int n, int k) {
 }
 
 int main() {
-    int n = 5;
-    int k = 3;
+    int n,k;
+   std::cout<<"Enter two numbers to calculate combinations: ";
+    std::cin>>n>>k;
     unsigned long long result = combination(n, k);
 
     cout << "Combination C(" << n << ", " << k << ") = " << result << endl;
