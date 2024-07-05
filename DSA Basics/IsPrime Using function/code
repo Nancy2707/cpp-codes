@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+bool isPrime(int num){
+    int i = 2;
+    for(int i = 2; i <=num / 2; i++){
+    if(num % i==0){
+        return false;
+    }
+    }
+    return true;
+}
+
+int main() {
+   int num;
+   std::cout<<"Enter a number to check prime:";
+   std::cin>>num;
+   int Prime = isPrime(num);
+   if(Prime==true){
+       std::cout<<"the number is prime";
+   }
+   else{
+       std::cout<<"the number is not prime";
+   }
+   return 0;
+}
