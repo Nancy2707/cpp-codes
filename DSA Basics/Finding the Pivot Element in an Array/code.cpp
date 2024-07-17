@@ -20,6 +20,7 @@ int findPivot(vector<int>& arr) {
       high = mid;
   }
 }
+    return arr[low];
 }
 int main() {
     vector<int> arr = {4, 5, 6, 7, 8, 1, 2};
