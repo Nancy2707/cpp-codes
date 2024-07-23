@@ -1,0 +1,14 @@
+You are given two arbitrary rectangles on a 2-D coordinate plane, which may have an intersecting area. You have to find the net area covered by both the rectangles on the cartesian plane.
+
+
+The orange area depicted in the above figure is the net area covered by both rectangles on the cartesian plane.
+
+Note:
+
+1. For a rectangle, its top left and bottom right coordinates are given.
+
+2. Coordinates of the rectangles are integer values.
+
+3. Edges of the given rectangles will always be parallel to the X and Y coordinate axes of the cartesian plane.
+
+4. It is guaranteed that both the rectangles will have at least a unit area.
