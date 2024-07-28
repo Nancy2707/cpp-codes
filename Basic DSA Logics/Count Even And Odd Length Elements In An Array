@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+
+void EvenOddLength(int arr[], int n)
+{
+    int even = 0;
+    int odd = 0;
+
+    for (int i = 0; i < n; i++) {
+        int count = 0;
+        int num = arr[i];
+
+        if (num == 0) {
+            count = 1;
+        } else {
+            while (num > 0) {
+                num /= 10;
+                count++;
+            }
+        }
+        if (count % 2 == 0) {
+            even++;
+        } else {
+            odd++;
+        }
+    }
+    cout << "Number of even length elements = " << even << endl;
+    cout << "Number of odd length elements = " << odd << endl;
+}
+int main()
+{
+    int arr[] = { 12, 43, 213, 232, 3433 };
+    int n = sizeof(arr) / sizeof(arr[0]);
+    EvenOddLength(arr, n);
+
+    return 0;
+}
