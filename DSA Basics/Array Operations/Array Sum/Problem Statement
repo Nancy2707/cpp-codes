@@ -1,0 +1,2 @@
+Problem statement
+Given a n*m binary matrix that is, it contains 0s and 1s only, we need to find and return sum of coverage of all zeros of the input matrix. Coverage for a particular 0 is defined as, total number of ones around a zero (i.e. in left, right, up and bottom directions).
