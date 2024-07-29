@@ -1,0 +1,4 @@
+Given a string and an integer n, shift and rotate the given string by n characters in right.
+
+Note : Assume n is always less than input string length.
+Detailed explanation ( Input/output format, Notes, Images )
