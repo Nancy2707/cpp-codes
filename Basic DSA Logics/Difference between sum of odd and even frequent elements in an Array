@@ -1,0 +1,30 @@
+#include <bits/stdc++.h> 
+using namespace std; 
+
+int findSum(int arr[], int N) 
+{ 
+	unordered_map<int, int> mp; 
+	for (int i = 0; i < N; i++) { 
+		mp[arr[i]]++; 
+	} 
+	int sum_odd = 0, sum_even = 0; 
+	for (auto itr = mp.begin(); 
+		itr != mp.end(); itr++) { 
+if (itr->second % 2 != 0) 
+			sum_odd += (itr->first) 
+					* (itr->second); 
+		if (itr->second % 2 == 0) 
+			sum_even += (itr->first) 
+						* (itr->second); 
+	} 
+	int diff = sum_even - sum_odd; 
+	return diff; 
+} 
+int main() 
+{ 
+	int arr[] = { 1, 5, 5, 2, 4, 3, 3 }; 
+	int N = sizeof(arr) / sizeof(arr[0]); 
+	cout << findSum(arr, N); 
+
+	return 0; 
+}
