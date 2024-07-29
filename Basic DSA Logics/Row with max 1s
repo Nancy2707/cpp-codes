@@ -1,0 +1,27 @@
+class Solution {
+  public:
+    int rowWithMax1s(vector<vector<int> > &arr) {
+    int numRows = arr.size();
+    if (numRows == 0) return -1;
+    
+    int numCols = arr[0].size();
+    if (numCols == 0) return -1;
+    
+    int maxCount = 0;
+    int maxRowIndex = -1;
+    int col = numCols - 1; 
+    for (int row = 0; row < numRows; ++row) {
+        while (col >= 0 && arr[row][col] == 1) {
+            --col;
+        }
+        int count = numCols - (col + 1);
+        if (count > maxCount) {
+            maxCount = count;
+            maxRowIndex = row;
+        }
+    }
+    
+    return maxRowIndex;
+}
+    
+};
