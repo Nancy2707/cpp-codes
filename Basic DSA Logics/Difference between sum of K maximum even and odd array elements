@@ -1,0 +1,40 @@
+#include <bits/stdc++.h>
+using namespace std;
+void evenOddDiff(int a[], int n, int k)
+{
+	int j = -1;
+	for (int i = 0; i < n; i++) {
+
+		if (a[i] % 2 == 0) {
+			j++;
+			swap(a[i], a[j]);
+		}
+	}
+
+	j++;
+	sort(a, a + j, greater<int>());
+	sort(a + j, a + n, greater<int>());
+
+	int evenSum = 0, oddSum = 0;
+
+	for (int i = 0; i < k; i++) {
+		evenSum += a[i];
+	}
+
+	for (int i = j; i < (j + k); i++) {
+		oddSum += a[i];
+	}
+	cout << abs(evenSum - oddSum);
+}
+
+// Driver Code
+int main()
+{
+	int arr[] = { 1, 8, 3, 4, 5 };
+	int N = sizeof(arr) / sizeof(arr[0]);
+
+	int K = 2;
+	evenOddDiff(arr, N, K);
+
+	return 0;
+}
