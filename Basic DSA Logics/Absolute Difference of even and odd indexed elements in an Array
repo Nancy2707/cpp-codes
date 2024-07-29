@@ -1,0 +1,27 @@
+
+#include <bits/stdc++.h>
+using namespace std;
+void EvenOddAbsoluteDifference(int arr[], int n)
+{
+	int even = 0;
+	int odd = 0;
+
+	for (int i = 0; i < n; i++) {
+		if (i % 2 == 0)
+			even = abs(even - arr[i]);
+		else
+			odd = abs(odd - arr[i]);
+	}
+
+	cout << "Even Index absolute difference : " << even;
+	cout << endl;
+	cout << "Odd Index absolute difference : " << odd;
+}
+
+int main()
+{
+	int arr[] = { 1, 2, 3, 4, 5, 6 };
+	int n = sizeof(arr) / sizeof(arr[0]);
+	EvenOddAbsoluteDifference(arr, n);
+	return 0;
+}
