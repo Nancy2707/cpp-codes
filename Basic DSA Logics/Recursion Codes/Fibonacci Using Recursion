@@ -1,7 +1,7 @@
 #include<iostream> 
 using namespace std;
 
-void sayDigit(int n, string arr[]) {
+void fibonacci(int n) {
 
     //base case
     if(n == 0)
