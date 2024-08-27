@@ -1,7 +1,7 @@
 #include<iostream> 
 using namespace std;
 
-void fibonacci(int n) {
+int fibonacci(int n) {
 
     //base case
     if(n == 0)
