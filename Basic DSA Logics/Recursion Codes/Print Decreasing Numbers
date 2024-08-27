@@ -1,0 +1,21 @@
+#include<iostream> 
+using namespace std;
+
+void DecNum(int n, string arr[]) {
+if(n==0){
+return ;
+DecNum(n - 1);
+cout<<n;
+
+}
+
+int main() {
+
+    int n;
+    cin >> n;
+
+    DecNum(n);
+
+
+    return 0;
+}
