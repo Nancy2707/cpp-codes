@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+bool Search(int *arr, int size, int key) {
+    if(size==0){
+        return false;
+    }
+    if (arr[1] == key) {
+        return true; 
+        }
+    return Search(arr + 1, size - 1, key);
+}
+
+int main() {
+    int arr[5] = {0, 1, 2,3,4};
+    int size = 5;
+    int key = 8;
+    cout<<Search(arr, size,key); 
+    return 0;
+}
+
