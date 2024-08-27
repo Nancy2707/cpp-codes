@@ -1,7 +1,7 @@
 #include<iostream> 
 using namespace std;
 
-void factorial(int n) {
+int factorial(int n) {
 
     //base case
     if(n == 0)
