@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+// Function to calculate power for integer base and exponent
+int Power(int base, int power) {
+    if(power<0){
+        return 0;
+    }
+    if(power==1){
+        return base;
+    }
+    return base*Power(base,power-1);
+}
+
+int main() {
+    int num,power;
+    cout<<"enter the number as well as power";
+    cin>>num>>power;
+    
+    cout<<Power(num,power);
+}
