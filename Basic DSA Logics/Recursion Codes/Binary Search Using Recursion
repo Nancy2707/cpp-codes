@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+// Function to perform binary search
+bool binarySearch(int arr[], int start, int end, int target) {
+    if (start > end) {
+        return false;
+}
+    
+    int mid = start + (end - start) / 2;
+
+    if (arr[mid] == target) {
+        return true; // Target found
+    }
+    if (arr[mid] > target) {
+        return binarySearch(arr, start, mid - 1, target);
+    } else {
+        return binarySearch(arr, mid + 1, end, target); 
+    }
+}
+
+int main() {
+    int target;
+    int arr[5] = {1, 2, 3, 4, 5};
+    cin >> target; 
+    int start = 0;
+    int end = 4;
+    if (binarySearch(arr, start, end, target)) {
+        cout << "Target found in the array" << endl;
+    } else {
+        cout << "Target not found in the array" << endl;
+    }
+
+    return 0;
+}
